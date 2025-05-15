@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-// This schema defines the structure of a friend request document in MongoDB
-// It includes the sender and recipient user IDs, as well as the status of the request
+
 const friendRequestSchema = new mongoose.Schema(
   {
     sender: {
@@ -24,7 +23,6 @@ const friendRequestSchema = new mongoose.Schema(
   }
 );
 
-// The timestamps option automatically adds createdAt and updatedAt fields to the schema
-const FriendRequest = mongoose.model("FriendRequest", friendRequestSchema); // 
+const FriendRequest = mongoose.model("FriendRequest", friendRequestSchema);
 
 export default FriendRequest;
