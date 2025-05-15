@@ -38,13 +38,12 @@ const OnboardingPage = () => {
   };
 
 const handleRandomAvatar = () => {
-  const seed = Math.random().toString(36).substring(2, 10);
-  const randomAvatar = `https://api.dicebear.com/7.x/notionists/png?seed=${seed}&backgroundType=solid&backgroundColor=edf2f7`;
+    const idx = Math.floor(Math.random() * 100) + 1; // 1-100 included
+    const randomAvatar = `https://avatar.iran.liara.run/public/${idx}.png`;
 
-  setFormState({ ...formState, profilePic: randomAvatar });
-  toast.success("Professional avatar generated!");
-};
-
+    setFormState({ ...formState, profilePic: randomAvatar });
+    toast.success("Random profile picture generated!");
+  };
 
 
 
