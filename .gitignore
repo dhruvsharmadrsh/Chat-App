@@ -75,3 +75,6 @@ Thumbs.db
 # MongoDB dump files
 # -------------------
 dump/
+
+node_modules/
+frontend/node_modules/
